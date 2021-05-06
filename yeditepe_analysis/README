@@ -1,0 +1,42 @@
+Requirements : 
+
+ROOT and pythia8 must be installed
+
+*) ROOT and PYTHIA environment variables must be set (see our setupEnv.sh and add it to the end of your .bashrc / or manually source it)
+
+*) anything under Analyses/pythia8-root must be main programs with file extensions .cc or .cpp
+
+HOW to build your codes ? 
+
+1) In order to build your user main programs put them under Analyses/pythia8-root folder
+Your file extensions must either be .cc or .cpp
+
+2) create a folder with any name you want in your computer. For example lets create a folder called "analysis-build"
+   and cd there 
+
+> mkdir analysis-build
+> cd analysis-build
+
+Then run cmake on this folder:
+> cmake /path/to/folder/yeditepe-analysis
+
+Then compile+install your codes :
+> make install
+
+then  INSTALL/bin folder is  created. There you may find your executables and run them...
+
+
+**********************************************************************************************************
+
+*) If you want your executables to be appended on system path so that you will be able to run programs on any location you want without specifying full path
+ You need to do :
+
+> source setup.sh
+
+Then for example just :
+
+> main01
+
+will be an available command on any location
+
+******************************************************************************************************************
